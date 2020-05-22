@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Blog Posts</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
+	<body>
+		
+	<h1>Post</h1>
+    <form method="POST" class="post-form">
+    	{% csrf_token %}
+    	<h4>Title:</h4>
+    	<input type="text" name="title" value="{{post.title}}">
+    	<hr>
+    	<h4>Post Content:</h4>
+    	<textarea name="text" cols=100 rows=20>{{post.text}}</textarea>
+        <button type="submit" class="save btn btn-default">Save</button>
+        <button type="submit" class="save btn btn-default">Delete</button>
+    </form>
+		
+		
+	</body>
+</html>
+
