@@ -19,8 +19,8 @@ from blog.views import post_list, post_detail, post_edit, post_new
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-	path('postlist/', post_list),
-	path('post/<int:pk>/', post_detail),
-	path('post/<int:pk>/edit/', post_edit),
-	path('post/new', post_new)
+	path('postlist/', post_list, name='allposts'),
+	path('post/<int:pk>/', post_detail, name='viewpost'),
+	path('post/<int:pk>/edit/', post_edit, name='editpost'),
+	path('post/new/', post_new)
 ]

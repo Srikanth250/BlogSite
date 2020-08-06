@@ -38,4 +38,4 @@ def post_new(request):
         post.save()
         return redirect('/postlist/')
     
-    return render(request, 'post_edit.html')
+    return render(request, 'post_new.html')
